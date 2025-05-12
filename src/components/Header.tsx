@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import Socials from './Socials';
 
-import '../../styles/planet.css';
+import '../styles/planet.css';
 
 const Header = () => {
   return (
@@ -22,12 +22,11 @@ const Header = () => {
                 </div>
               </div>
               <div className="text-3xl text-white">
-                Rafael <span className="font-bold">Rocha</span>
+                Rafael <span className="font-bold text-accent">Rocha</span>
               </div>
             </div>
           </Link>
 
-          {/* socials */}
           <Socials />
         </div>
       </div>

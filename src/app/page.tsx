@@ -2,19 +2,18 @@
 
 import { motion } from 'framer-motion';
 
+import DownloadCV from '@/components/DownloadCV';
 import { fadeIn } from '@/helpers/variants';
 
-import Avatar from './components/Avatar';
-import ProjectsBtn from './components/ProjectsBtn';
-import SimpleParticles from './components/SimpleParticles';
+import Avatar from '../components/Avatar';
+import GoToProjectsPage from '../components/GoToProjectsPage';
+import SimpleParticles from '../components/SimpleParticles';
 
 const Home = () => {
   return (
     <div className="h-full bg-primary/60">
-      {/* text */}
       <div className="size-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div className="container mx-auto flex h-full flex-col justify-center text-center xl:pt-40 xl:text-left">
-          {/* title */}
           <motion.h1
             variants={fadeIn('down', 0.2)}
             initial="hidden"
@@ -23,11 +22,12 @@ const Home = () => {
             className="h1"
           >
             Desenvolvedor <span className="text-accent">Full Stack</span> <br />
-            Simples, Objetivo
-            <br /> e Moderno
+            {/* Simples, Objetivo e Moderno */}
+            <span className="text-xl md:text-5xl">
+              Simples, Objetivo e Moderno
+            </span>
           </motion.h1>
 
-          {/* subtitle */}
           <motion.p
             variants={fadeIn('down', 0.3)}
             initial="hidden"
@@ -35,39 +35,40 @@ const Home = () => {
             exit="hidden"
             className="mx-auto mb-10 max-w-sm xl:mx-0 xl:mb-16 xl:max-w-xl"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
-            exercitationem harum, quia nulla temporibus deleniti libero veniam
-            vero beatae numquam ducimus illum ab similique ipsam tempore fugit
-            quod laudantium debitis.
+            Soluções fullstack com design moderno e performance. Crio interfaces
+            responsivas e intuitivas que refletem a identidade da sua empresa,
+            junto a um backend sólido, seguro e eficiente. Código limpo, bem
+            estruturado e foco em entregas de qualidade, sempre em colaboração
+            com a equipe.
           </motion.p>
 
-          <div className="relative flex justify-center xl:hidden">
-            <ProjectsBtn />
+          <div className="relative flex items-center justify-center gap-x-2 xl:hidden">
+            <DownloadCV />
+            <GoToProjectsPage />
           </div>
+
           <motion.div
             variants={fadeIn('down', 0.4)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="hidden xl:flex"
+            className="hidden items-center gap-x-2 xl:flex"
           >
-            <ProjectsBtn />
+            <DownloadCV />
+            <GoToProjectsPage />
           </motion.div>
         </div>
       </div>
-      {/* image */}
+
       <div className="absolute bottom-0 right-0 h-full w-[1280px]">
-        {/* bg img */}
         <div
           role="img"
           className="xl:bg-explosion translate-z-0 absolute size-full bg-none mix-blend-color-dodge xl:bg-cover xl:bg-right xl:bg-no-repeat"
           aria-hidden
         />
 
-        {/* particles */}
         <SimpleParticles />
 
-        {/* avatar */}
         <motion.div
           variants={fadeIn('up', 0.5)}
           initial="hidden"

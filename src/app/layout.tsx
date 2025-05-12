@@ -3,9 +3,9 @@
 import { Sora } from 'next/font/google';
 import { AnimatePresence, motion } from 'framer-motion';
 
-import Header from './components/Header';
-import NavBar from './components/NavBar';
-import Transition from './components/Transition';
+import Header from '../components/Header';
+import NavBar from '../components/NavBar';
+import Transition from '../components/Transition';
 
 import '../styles/globals.css';
 
@@ -45,7 +45,7 @@ export default function RootLayout({
         <Header />
 
         <AnimatePresence mode="wait">
-          <motion.div className="h-full">
+          <motion.div className="h-full bg-[#1d2232]">
             <Transition />
             {children}
           </motion.div>
