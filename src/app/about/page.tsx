@@ -39,7 +39,7 @@ interface IAbout {
   info: Array<IInfo>;
 }
 
-export const aboutData = [
+const aboutData = [
   {
     title: 'skills',
     info: [
@@ -174,7 +174,7 @@ const About = () => {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="absolute -left-[330px] bottom-0 hidden xl:flex"
+        className="absolute bottom-0 left-[calc(-330px)] hidden xl:flex"
       >
         <Avatar />
       </motion.div>
