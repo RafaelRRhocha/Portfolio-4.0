@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const GoToProjectsPage = () => {
   return (
     <div className="mx-auto xl:mx-0">
-      <Link href="/work">
+      <Link href="/projects">
         <motion.div
           className="group relative flex h-[45px] w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-cyan-500/30 bg-gradient-to-r from-black/50 to-black/30 px-6 backdrop-blur-sm"
           whileHover="hover"
@@ -31,7 +31,7 @@ const GoToProjectsPage = () => {
           <div className="absolute -left-2 top-0 h-full w-px bg-gradient-to-b from-transparent via-cyan-500/50 to-transparent" />
           <div className="absolute -right-2 top-0 h-full w-px bg-gradient-to-b from-transparent via-cyan-500/50 to-transparent" />
 
-          <span className="relative z-10 text-sm font-light uppercase tracking-[0.2em] text-cyan-50">
+          <span className="relative z-10 cursor-pointer text-sm font-light uppercase tracking-[0.2em] text-cyan-50">
             Projetos
           </span>
 

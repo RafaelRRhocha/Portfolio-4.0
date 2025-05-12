@@ -7,9 +7,10 @@ const DownloadCV = () => {
         href="https://drive.google.com/file/d/1bo4VJgZ2iOtuQrUr5r4g8F5yD3NImHzo/view?usp=sharing"
         target="_blank"
         rel="noreferrer"
+        className="cursor-pointer"
       >
         <motion.div
-          className="group relative flex h-[45px] w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-cyan-500/30 bg-gradient-to-r from-black/50 to-black/30 px-6 backdrop-blur-sm"
+          className="group relative flex h-[45px] w-[160px] items-center justify-center overflow-hidden rounded-lg border border-cyan-500/30 bg-gradient-to-r from-black/50 to-black/30 px-6 backdrop-blur-sm"
           whileHover="hover"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
