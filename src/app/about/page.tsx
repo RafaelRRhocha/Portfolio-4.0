@@ -39,9 +39,9 @@ interface IAbout {
   info: Array<IInfo>;
 }
 
-const aboutData = [
+const aboutData: Array<IAbout> = [
   {
-    title: 'skills',
+    title: 'Skills',
     info: [
       {
         title: 'Front-end',
@@ -146,23 +146,53 @@ const aboutData = [
     ],
   },
   {
-    title: 'experience',
+    title: 'Soft Skills',
     info: [
       {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
+        title: 'Comunicação Efetiva',
+        stage:
+          'Capacidade de articular ideias complexas de forma clara e objetiva. Facilita o alinhamento entre equipes e stakeholders.',
       },
       {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
+        title: 'Adaptabilidade',
+        stage:
+          'Aprendizado ágil de novas tecnologias e métodos. Atua com flexibilidade em cenários e equipes em constante mudança.',
       },
       {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
+        title: 'Proatividade',
+        stage:
+          'Toma iniciativa para identificar e resolver problemas, propondo melhorias contínuas nos processos.',
+      },
+      {
+        title: 'Resolução de Problemas',
+        stage:
+          'Realiza análise criteriosa de requisitos e desenvolve soluções eficazes para desafios técnicos e operacionais.',
       },
     ],
   },
-] as Array<IAbout>;
+  {
+    title: 'Experiência',
+    info: [
+      {
+        title: 'Desenvolvedor Full Stack - uMode',
+        stage: '2023 - Atualmente',
+      },
+    ],
+  },
+  {
+    title: 'Escolaridade',
+    info: [
+      {
+        title: 'Desenvolvimento Web Fullstack, Trybe',
+        stage: '2022 - 2023',
+      },
+      {
+        title: 'Engenharia de Software, Estácio',
+        stage: '2023 - Cursando',
+      },
+    ],
+  },
+];
 
 const About = () => {
   const [index, setIndex] = useState(0);

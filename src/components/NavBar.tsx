@@ -11,18 +11,28 @@ import {
   HiViewColumns,
 } from 'react-icons/hi2';
 
-export const navData = [
-  { name: 'home', path: '/', Icon: HiHome },
-  { name: 'about', path: '/about', Icon: HiUser },
-  { name: 'services', path: '/services', Icon: HiRectangleGroup },
-  { name: 'work', path: '/work', Icon: HiViewColumns },
+interface INavBar {
+  name: string;
+  path: string;
+  Icon: React.ElementType;
+}
+
+const navData: Array<INavBar> = [
+  { name: 'Home', path: '/', Icon: HiHome },
+  { name: 'Sobre mim', path: '/about', Icon: HiUser },
   {
-    name: 'testimonials',
-    path: '/testimonials',
+    name: 'O que eu faço?',
+    path: '/services',
+    Icon: HiRectangleGroup,
+  },
+  { name: 'Projetos', path: '/projects', Icon: HiViewColumns },
+  {
+    name: 'Feedbacks',
+    path: '/feedbacks',
     Icon: HiChatBubbleBottomCenterText,
   },
   {
-    name: 'contact',
+    name: 'Contato',
     path: '/contact',
     Icon: HiEnvelope,
   },
@@ -42,25 +52,24 @@ const NavBar = () => {
             href={link.path}
             key={i}
           >
-            {/* tolltip */}
             <div
               role="tooltip"
               className="absolute right-0 hidden pr-14 xl:group-hover:flex"
             >
-              <div className="relative flex items-center rounded-[3px] bg-white p-[6px] text-primary">
+              <div
+                className={`relative flex w-[80px] items-center rounded-[3px] bg-gray-200 p-[6px] text-primary`}
+              >
                 <div className="text-[12px] font-semibold capitalize leading-none">
                   {link.name}
                 </div>
 
-                {/* triangle */}
                 <div
-                  className="absolute -right-2 border-y-[6px] border-l-8 border-r-0 border-solid border-y-transparent border-l-white"
+                  className="absolute -right-2 border-y-[6px] border-l-8 border-r-0 border-solid border-y-transparent border-l-gray-200"
                   aria-hidden
                 />
               </div>
             </div>
 
-            {/* icon */}
             <div>
               <link.Icon aria-hidden />
             </div>
