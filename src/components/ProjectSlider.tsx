@@ -139,7 +139,7 @@ const ProjectSlider = () => {
         clickable: true,
       }}
       modules={[Pagination]}
-      className="h-[280px] sm:h-[480px]"
+      className="h-[300px] md:h-[480px]"
     >
       {workSlides.map((slide, i) => (
         <SwiperSlide key={i}>

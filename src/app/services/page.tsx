@@ -28,8 +28,9 @@ const Services = () => {
               exit="hidden"
               className="mx-auto mb-4 max-w-[400px] text-sm md:text-base lg:mx-0"
             >
-              Desenvolvimento de sites e aplicativos que são fáceis de usar,
-              rápidos e eficientes.
+              Transformo ideias em produtos digitais completos. Com foco em
+              front-end, construo interfaces modernas e responsivas, apoiadas
+              por um back-end sólido e bem estruturado.
             </motion.p>
           </div>
 

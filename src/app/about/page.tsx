@@ -204,7 +204,7 @@ const About = () => {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="absolute bottom-0 left-[calc(-330px)] hidden xl:flex"
+        className="absolute bottom-0 left-[calc(-330px)] hidden h-[45rem] lg:flex"
       >
         <Avatar />
       </motion.div>
@@ -256,7 +256,7 @@ const About = () => {
             ))}
           </div>
 
-          <div className="flex min-h-[500px] flex-col items-center py-2 xl:items-start xl:py-6">
+          <div className="flex min-h-[500px] flex-col items-center py-2 md:min-h-[600px] xl:items-start xl:py-6">
             {aboutData[index].info.map((item, idx) => (
               <div key={idx} className="mb-6 w-full">
                 <h3 className="mb-4 text-xl font-semibold text-white">
