@@ -15,14 +15,12 @@ const SimpleParticles = () => {
     let animationFrameId: number;
     let particles: Array<Particle> = [];
 
-    // Configuração do canvas para preencher o contêiner
+    // Configuração do canvas para preencher a viewport
     const resizeCanvas = () => {
-      const container = canvas.parentElement;
-      if (container) {
-        canvas.width = container.clientWidth;
-        canvas.height = container.clientHeight;
-        createParticles();
-      }
+      // Usar a largura e altura da viewport em vez do contêiner
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      createParticles();
     };
 
     // Criação de partículas
@@ -171,8 +169,8 @@ const SimpleParticles = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute size-full"
-      style={{ pointerEvents: 'none' }}
+      className="fixed left-0 top-0 size-full"
+      style={{ pointerEvents: 'none', zIndex: -1 }}
     />
   );
 };

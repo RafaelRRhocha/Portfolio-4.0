@@ -25,7 +25,7 @@ const Projects = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mx-auto mb-4 max-w-[400px] lg:mx-0"
+              className="mx-auto mb-4 max-w-[400px] text-sm md:text-base lg:mx-0"
             >
               Aqui estão alguns dos meus projetos, feitos a partir de 2022,
               estarei atualizando conforme for realizando novos projetos que
@@ -38,7 +38,7 @@ const Projects = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="w-full xl:max-w-[65%]"
+            className="w-full xl:max-w-[60%]"
           >
             <ProjectSlider />
           </motion.div>

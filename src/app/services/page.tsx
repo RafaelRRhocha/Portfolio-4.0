@@ -26,7 +26,7 @@ const Services = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mx-auto mb-4 max-w-[400px] lg:mx-0"
+              className="mx-auto mb-4 max-w-[400px] text-sm md:text-base lg:mx-0"
             >
               Desenvolvimento de sites e aplicativos que são fáceis de usar,
               rápidos e eficientes.

@@ -1,6 +1,6 @@
 'use client';
 
-import { RxDesktop, RxPencil2 } from 'react-icons/rx';
+import { RxDesktop, RxPencil2, RxRocket } from 'react-icons/rx';
 import { FreeMode, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -26,6 +26,12 @@ const serviceData: Array<IService> = [
     title: 'Desenvolvimento',
     description:
       'Desenvolvimento de sites e aplicativos que são fáceis de usar, rápidos e eficientes.',
+  },
+  {
+    Icon: RxRocket,
+    title: 'SEO',
+    description:
+      'Otimização de sites para melhorar a visibilidade e o tráfego orgânico.',
   },
 ];
 

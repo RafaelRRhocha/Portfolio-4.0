@@ -152,12 +152,12 @@ const ProjectSlider = () => {
                 rel="noreferrer noopener"
                 className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]"
               >
-                <div className="group relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-[#0f1015]/30 shadow-lg transition-all duration-300 hover:shadow-accent/20">
-                  <div className="hidden w-full border-b border-accent/20 bg-[#0f1015]/90 p-2 text-center text-sm font-medium tracking-wider text-white/90 transition-all duration-300 group-hover:bg-accent/20 group-hover:text-white lg:block">
+                <div className="group relative flex w-full flex-col items-center justify-center rounded-lg bg-[#0f1015]/30 shadow-lg transition-all duration-300 hover:shadow-accent/20">
+                  <div className="w-full border-b border-accent/20 bg-[#0f1015]/90 p-2 text-center text-xs font-medium tracking-wider text-white/90 transition-all duration-300 group-hover:bg-accent/20 group-hover:text-white md:text-sm">
                     {image.title}
                   </div>
 
-                  <div className="group relative flex w-full items-center justify-center overflow-hidden">
+                  <div className="group relative flex w-full items-center justify-center">
                     <Image
                       src={image.path}
                       alt={image.title}
@@ -168,10 +168,11 @@ const ProjectSlider = () => {
 
                     <div className="absolute inset-0 bg-[#0f1015] opacity-0 transition-all duration-700 group-hover:opacity-80" />
 
-                    <div className="absolute bottom-0 flex translate-y-full gap-x-2 transition-all duration-300 group-hover:-translate-y-10 group-hover:xl:-translate-y-20">
-                      <div className="delay-100">ACESSAR</div>
-                      <div className="translate-y-[500%] transition-all delay-150 duration-300 group-hover:translate-y-0">
-                        PROJETO
+                    <div className="absolute bottom-0 hidden translate-y-full items-center gap-x-2 transition-all duration-300 group-hover:-translate-y-10 md:flex group-hover:xl:-translate-y-20">
+                      <div className="flex items-center gap-x-1">
+                        <div className="whitespace-nowrap opacity-0 transition-all duration-300 group-hover:opacity-100">
+                          ACESSAR PROJETO
+                        </div>
                       </div>
                       <div className="translate-y-[500%] text-xl transition-all delay-150 duration-300 group-hover:translate-y-0">
                         <BsArrowRight aria-hidden />

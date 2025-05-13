@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FF4A70;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FF4A70;
+  border-radius: 20px;
+}
+
 .translate-z-0 {
   transform: translateZ(0px);
 }
@@ -20,10 +46,10 @@
 
 @layer base {
   body {
-    @apply bg-secondary overflow-hidden leading-relaxed;
+    @apply bg-secondary leading-relaxed w-screen h-screen;
   }
   .page {
-    @apply w-full h-screen overflow-hidden;
+    @apply w-full h-screen;
   }
   .h1 {
     @apply text-[35px] leading-tight md:text-[60px] md:leading-[1.3] mb-8 font-semibold;

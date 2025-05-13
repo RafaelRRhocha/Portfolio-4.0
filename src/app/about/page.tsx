@@ -224,7 +224,7 @@ const About = () => {
             variants={fadeIn('right', 0.4)}
             initial="hidden"
             animate="show"
-            className="mx-auto mb-6 max-w-[500px] px-2 xl:mx-0 xl:mb-12 xl:px-0"
+            className="mx-auto mb-6 max-w-[500px] px-2 text-sm md:text-base xl:mx-0 xl:mb-12 xl:px-0"
           >
             Já colaborei com grandes nomes da moda, como Reserva, Malwee, Grupo
             Colméia, Grupo Soma, Vivara, NTK, Grupo Laces, entre outros. Busco
@@ -239,16 +239,16 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex h-[480px] w-full flex-col xl:max-w-[48%]"
+          className="flex w-full flex-col pb-16 xl:max-w-[48%]"
         >
-          <div className="mx-auto mb-4 flex gap-x-4 xl:mx-0 xl:gap-x-8">
+          <div className="mx-auto mb-4 flex flex-wrap gap-4 xl:mx-0 xl:gap-x-8">
             {aboutData.map((item, itemI) => (
               <div
                 key={itemI}
                 className={`${
                   index === itemI &&
                   'text-accent after:w-full after:bg-accent after:transition-all after:duration-300'
-                } relative cursor-pointer capitalize after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-8 after:bg-white xl:text-lg`}
+                } relative cursor-pointer text-sm capitalize after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-8 after:bg-white xl:text-lg`}
                 onClick={() => setIndex(itemI)}
               >
                 {item.title}
@@ -256,7 +256,7 @@ const About = () => {
             ))}
           </div>
 
-          <div className="flex flex-col items-center py-2 xl:items-start xl:py-6">
+          <div className="flex min-h-[500px] flex-col items-center py-2 xl:items-start xl:py-6">
             {aboutData[index].info.map((item, idx) => (
               <div key={idx} className="mb-6 w-full">
                 <h3 className="mb-4 text-xl font-semibold text-white">

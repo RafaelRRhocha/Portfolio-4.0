@@ -15,7 +15,7 @@ const Feedbacks = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="h2 mb-8 xl:mb-0"
+          className="h2"
         >
           O que as <span className="text-accent">pessoas</span> dizem
         </motion.h2>

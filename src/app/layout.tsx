@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 import Header from '../components/Header';
 import NavBar from '../components/NavBar';
+import SimpleParticles from '../components/SimpleParticles';
 import Transition from '../components/Transition';
 
 import '../styles/globals.css';
@@ -39,13 +40,14 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className={`page bg-site bg-cover bg-no-repeat text-white ${sora.variable} relative font-sora`}
+        className={`page overflow-x-hidden overflow-y-scroll bg-[#1d2232] bg-gradient-to-r from-primary/10 via-black/30 to-black/10 text-white md:overflow-hidden ${sora.variable} relative font-sora`}
       >
+        <SimpleParticles />
         <NavBar />
         <Header />
 
         <AnimatePresence mode="wait">
-          <motion.div className="h-full bg-[#1d2232]">
+          <motion.div className="h-full">
             <Transition />
             {children}
           </motion.div>

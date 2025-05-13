@@ -99,7 +99,7 @@ const Notification: FC<NotificationProps> = ({ message, color, onClose }) => {
       {message && (
         <div className="fixed inset-x-0 bottom-0 z-50 mb-7 flex justify-center">
           <motion.div
-            className={`${bgColorClass} min-w-[280px] max-w-[400px] overflow-hidden rounded-md shadow-lg transition-all hover:shadow-xl`}
+            className={`${bgColorClass} min-w-[280px] max-w-[400px] rounded-md shadow-lg transition-all hover:shadow-xl`}
             variants={notificationVariants}
             initial="hidden"
             animate="visible"

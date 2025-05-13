@@ -111,7 +111,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="btn group flex max-w-[170px] items-center justify-center overflow-hidden rounded-full border border-white/50 px-8 transition-all duration-300 hover:border-accent hover:text-accent"
+              className="btn group flex max-w-[170px] items-center justify-center rounded-full border border-white/50 px-8 transition-all duration-300 hover:border-accent hover:text-accent"
               disabled={isLoading}
               aria-disabled={isLoading}
             >
