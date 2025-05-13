@@ -37,10 +37,20 @@ export default function RootLayout({
         />
         <meta name="author" content="Rafael Rocha" />
         <meta name="theme-color" content="#FF4A70" />
+
+        <meta property="og:title" content="Rafael Rocha" />
+        <meta
+          property="og:description"
+          content="Rafael Rocha é um desenvolvedor full stack, simples, objetivo e moderno"
+        />
+        <meta
+          property="og:image"
+          content="https://avatars.githubusercontent.com/u/99758843?v=4"
+        />
       </head>
       <body
         suppressHydrationWarning
-        className={`page overflow-x-hidden overflow-y-scroll bg-[#1d2232] bg-gradient-to-r from-primary/10 via-black/30 to-black/10 text-white md:overflow-hidden ${sora.variable} relative font-sora`}
+        className={`page overflow-x-hidden overflow-y-scroll bg-[#1d2232] bg-gradient-to-r from-primary/10 to-black/10 text-white md:overflow-hidden ${sora.variable} relative font-sora`}
       >
         <SimpleParticles />
         <NavBar />
