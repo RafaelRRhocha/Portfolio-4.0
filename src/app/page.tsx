@@ -41,17 +41,12 @@ const Home = () => {
             com a equipe.
           </motion.p>
 
-          <div className="relative flex items-center justify-center gap-x-2 xl:hidden">
-            <DownloadCV />
-            <GoToProjectsPage />
-          </div>
-
           <motion.div
             variants={fadeIn('down', 0.4)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="hidden items-center gap-x-2 xl:flex"
+            className="flex items-center gap-x-2"
           >
             <DownloadCV />
             <GoToProjectsPage />
