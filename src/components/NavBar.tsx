@@ -8,7 +8,7 @@ import {
   HiHome,
   HiRectangleGroup,
   HiUser,
-  HiViewColumns,
+  // HiViewColumns,
 } from 'react-icons/hi2';
 
 interface INavBar {
@@ -25,7 +25,7 @@ const navData: Array<INavBar> = [
     path: '/services',
     Icon: HiRectangleGroup,
   },
-  { name: 'Projetos', path: '/projects', Icon: HiViewColumns },
+  // { name: 'Projetos', path: '/projects', Icon: HiViewColumns },
   {
     name: 'Feedbacks',
     path: '/feedbacks',

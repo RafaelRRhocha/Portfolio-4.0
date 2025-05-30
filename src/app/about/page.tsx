@@ -220,6 +220,7 @@ const About = () => {
           >
             Código <span className="text-accent">limpo</span> começa com clareza
           </motion.h2>
+
           <motion.p
             variants={fadeIn('right', 0.4)}
             initial="hidden"
@@ -256,7 +257,7 @@ const About = () => {
             ))}
           </div>
 
-          <div className="flex min-h-[500px] flex-col items-center py-2 md:min-h-[600px] xl:items-start xl:py-6">
+          <div className="flex flex-col items-center py-2">
             {aboutData[index].info.map((item, idx) => (
               <div key={idx} className="mb-6 w-full">
                 <h3 className="mb-4 text-xl font-semibold text-white">

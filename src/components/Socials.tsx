@@ -9,12 +9,12 @@ export const socialData = [
   },
   {
     name: 'Github',
-    link: 'https://www.linkedin.com/in/rafael-rhocha',
+    link: 'https://github.com/RafaelRRhocha',
     Icon: RiGithubLine,
   },
   {
     name: 'Linkedin',
-    link: 'https://www.linkedin.com/in/rafael-rocha-b20000200/',
+    link: 'https://www.linkedin.com/in/rafael-rhocha',
     Icon: RiLinkedinLine,
   },
 ];
