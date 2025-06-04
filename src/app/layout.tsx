@@ -2,6 +2,9 @@
 
 import { Sora } from 'next/font/google';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+
+import { LanguageProvider } from '@/contexts/LanguageContext';
 
 import Header from '../components/Header';
 import NavBar from '../components/NavBar';
@@ -10,6 +13,8 @@ import Transition from '../components/Transition';
 
 import '../styles/globals.css';
 
+import '../i18n';
+
 // setup font
 const sora = Sora({
   subsets: ['latin'],
@@ -17,20 +22,15 @@ const sora = Sora({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
 });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+function AppLayout({ children }: { children: React.ReactNode }) {
+  const { t, i18n } = useTranslation('common');
+
   return (
-    <html lang="pt-BR">
+    <html lang={i18n.language}>
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <title>Rafael Rocha | Portfolio</title>
-        <meta
-          name="description"
-          content="Rafael Rocha é um desenvolvedor full stack, simples, objetivo e moderno"
-        />
+        <title>{t('meta.title')}</title>
+        <meta name="description" content={t('meta.description')} />
         <meta
           name="keywords"
           content="developer, freelancer, react, next, nextjs, html, css, javascript, typescript, ts, js, modern-ui, modern-ux, framer-motion, 3d-website, particle-effect"
@@ -39,10 +39,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#FF4A70" />
 
         <meta property="og:title" content="Rafael Rocha" />
-        <meta
-          property="og:description"
-          content="Rafael Rocha é um desenvolvedor full stack, simples, objetivo e moderno"
-        />
+        <meta property="og:description" content={t('meta.description')} />
         <meta
           property="og:image"
           content="https://avatars.githubusercontent.com/u/99758843?v=4"
@@ -64,5 +61,17 @@ export default function RootLayout({
         </AnimatePresence>
       </body>
     </html>
+  );
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <LanguageProvider>
+      <AppLayout>{children}</AppLayout>
+    </LanguageProvider>
   );
 }

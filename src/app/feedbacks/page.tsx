@@ -1,12 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import { fadeIn } from '@/helpers/variants';
 
 import FeedbacksSlider from '../../components/FeedbacksSlider';
 
 const Feedbacks = () => {
+  const { t } = useTranslation('common');
+
   return (
     <div className="h-full bg-primary/30 py-32 text-center">
       <div className="container mx-auto flex h-full flex-col justify-center">
@@ -17,7 +20,8 @@ const Feedbacks = () => {
           exit="hidden"
           className="h2"
         >
-          O que as <span className="text-accent">pessoas</span> dizem
+          {t('feedbacks.title')}{' '}
+          <span className="text-accent">{t('feedbacks.secondTitle')}</span>
         </motion.h2>
 
         <motion.div
