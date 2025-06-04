@@ -2,12 +2,14 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import Notification from '@/components/Notification';
 import { fadeIn } from '@/helpers/variants';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const { t } = useTranslation('common');
   const [isLoading, setIsLoading] = useState(false);
   const [notificationInfos, setNotificationInfos] = useState({
     text: '',
@@ -36,17 +38,13 @@ const Contact = () => {
       );
 
       if (formData.status === 200) {
-        handleNotification(true, 'Email enviado com sucesso!', 'green');
+        handleNotification(true, t('contact.notification.success'), 'green');
         myForm.reset();
       } else {
         throw new Error(`An error ocurred => ${formData}`);
       }
     } catch (error) {
-      handleNotification(
-        true,
-        'Ops, ocorreu um erro ao enviar o email! Por favor, tente novamente',
-        'red',
-      );
+      handleNotification(true, t('contact.notification.error'), 'red');
       console.error(error);
     } finally {
       setIsLoading(false);
@@ -64,7 +62,7 @@ const Contact = () => {
             exit="hidden"
             className="h2 mb-12 text-center"
           >
-            Entre em <span className="text-accent">Contato</span>
+            {t('contact.title')} <span className="text-accent">Contato</span>
           </motion.h2>
 
           <motion.form
@@ -81,7 +79,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="name"
-                placeholder="Nome"
+                placeholder={t('contact.form.name')}
                 className="input"
                 disabled={isLoading}
                 aria-disabled={isLoading}
@@ -91,7 +89,7 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="E-mail"
+                placeholder={t('contact.form.email')}
                 className="input"
                 disabled={isLoading}
                 aria-disabled={isLoading}
@@ -101,7 +99,7 @@ const Contact = () => {
             </div>
             <textarea
               name="message"
-              placeholder="Mensagem..."
+              placeholder={t('contact.form.message')}
               className="textarea"
               disabled={isLoading}
               aria-disabled={isLoading}
@@ -115,7 +113,7 @@ const Contact = () => {
               disabled={isLoading}
               aria-disabled={isLoading}
             >
-              <span>Enviar</span>
+              <span>{t('contact.form.send')}</span>
             </button>
           </motion.form>
 

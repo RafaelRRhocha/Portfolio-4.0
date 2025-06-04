@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslation } from 'react-i18next';
 import { RxDesktop, RxPencil2, RxRocket } from 'react-icons/rx';
 import { FreeMode, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,30 +13,33 @@ interface IService {
   Icon: React.ElementType;
   title: string;
   description: string;
+  translationKey: string;
 }
 
-const serviceData: Array<IService> = [
-  {
-    Icon: RxPencil2,
-    title: 'Design',
-    description:
-      'O melhor design elegante e responsivo que fala a linguagem da sua empresa.',
-  },
-  {
-    Icon: RxDesktop,
-    title: 'Desenvolvimento',
-    description:
-      'Desenvolvimento de sites e aplicativos que são fáceis de usar, rápidos e eficientes.',
-  },
-  {
-    Icon: RxRocket,
-    title: 'SEO',
-    description:
-      'Otimização de sites para melhorar a visibilidade e o tráfego orgânico.',
-  },
-];
-
 const ServiceSlider = () => {
+  const { t } = useTranslation('common');
+
+  const serviceData: Array<IService> = [
+    {
+      Icon: RxPencil2,
+      title: t('services.items.design.title'),
+      description: t('services.items.design.description'),
+      translationKey: 'design',
+    },
+    {
+      Icon: RxDesktop,
+      title: t('services.items.development.title'),
+      description: t('services.items.development.description'),
+      translationKey: 'development',
+    },
+    {
+      Icon: RxRocket,
+      title: t('services.items.seo.title'),
+      description: t('services.items.seo.description'),
+      translationKey: 'seo',
+    },
+  ];
+
   return (
     <Swiper
       breakpoints={{

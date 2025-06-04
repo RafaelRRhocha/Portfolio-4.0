@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
 import {
   HiChatBubbleBottomCenterText,
   HiEnvelope,
@@ -15,31 +16,41 @@ interface INavBar {
   name: string;
   path: string;
   Icon: React.ElementType;
+  translationKey: string;
 }
 
 const navData: Array<INavBar> = [
-  { name: 'Home', path: '/', Icon: HiHome },
-  { name: 'Sobre mim', path: '/about', Icon: HiUser },
+  { name: 'Home', path: '/', Icon: HiHome, translationKey: 'navbar.home' },
+  {
+    name: 'Sobre mim',
+    path: '/about',
+    Icon: HiUser,
+    translationKey: 'navbar.about',
+  },
   {
     name: 'O que eu faço?',
     path: '/services',
     Icon: HiRectangleGroup,
+    translationKey: 'navbar.services',
   },
   // { name: 'Projetos', path: '/projects', Icon: HiViewColumns },
   {
     name: 'Feedbacks',
     path: '/feedbacks',
     Icon: HiChatBubbleBottomCenterText,
+    translationKey: 'navbar.feedbacks',
   },
   {
     name: 'Contato',
     path: '/contact',
     Icon: HiEnvelope,
+    translationKey: 'navbar.contact',
   },
 ];
 
 const NavBar = () => {
   const pathname = usePathname();
+  const { t } = useTranslation('common');
 
   return (
     <nav className="fixed inset-y-0 z-50 mt-auto flex h-max w-full flex-col items-center gap-y-4 xl:right-[2%] xl:h-screen xl:w-16 xl:max-w-md xl:justify-center">
@@ -60,7 +71,7 @@ const NavBar = () => {
                 className={`relative flex w-[80px] items-center rounded-[3px] bg-gray-200 p-[6px] text-primary`}
               >
                 <div className="text-[12px] font-semibold capitalize leading-none">
-                  {link.name}
+                  {t(link.translationKey)}
                 </div>
 
                 <div

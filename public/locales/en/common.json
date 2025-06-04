@@ -1,0 +1,106 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About me",
+    "services": "What I do?",
+    "feedbacks": "Feedbacks",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Developer",
+    "subtitle": "Simple, Objective and Modern",
+    "description": "Fullstack solutions with modern design and performance. I create responsive and intuitive interfaces that reflect your company's identity, along with a solid, secure, and efficient backend. Clean, well-structured code and focus on quality deliveries, always in collaboration with the team.",
+    "cv": "Resume"
+  },
+  "about": {
+    "title": "Clean code starts with clarity",
+    "description": "I've collaborated with major fashion brands like Reserva, Malwee, Grupo Colméia, Grupo Soma, Vivara, NTK, Grupo Laces, among others. I always strive to deliver efficient and innovative solutions, focusing on quality and performance. I enjoy challenges that allow me to grow professionally and contribute to impactful projects.",
+    "tabs": {
+      "skills": "Skills",
+      "softSkills": "Soft Skills",
+      "experience": "Experience",
+      "education": "Education"
+    },
+    "categories": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "database": "Database",
+      "testing": "Testing"
+    },
+    "softSkills": {
+      "communication": {
+        "title": "Effective Communication",
+        "description": "Ability to articulate complex ideas clearly and objectively. Facilitates alignment between teams and stakeholders."
+      },
+      "adaptability": {
+        "title": "Adaptability",
+        "description": "Agile learning of new technologies and methods. Works flexibly in constantly changing scenarios and teams."
+      },
+      "proactivity": {
+        "title": "Proactivity",
+        "description": "Takes initiative to identify and solve problems, proposing continuous improvements in processes."
+      },
+      "problemSolving": {
+        "title": "Problem Solving",
+        "description": "Performs careful analysis of requirements and develops effective solutions for technical and operational challenges."
+      }
+    },
+    "experience": {
+      "umode": {
+        "title": "Full Stack Developer - uMode",
+        "period": "2023 - Present"
+      }
+    },
+    "education": {
+      "trybe": {
+        "title": "Fullstack Web Development, Trybe",
+        "period": "2022 - 2023"
+      },
+      "estacio": {
+        "title": "Software Engineering, Estácio",
+        "period": "2023 - Ongoing"
+      }
+    }
+  },
+  "services": {
+    "title": "What I do?",
+    "description": "I transform ideas into complete digital products. With a focus on front-end, I build modern and responsive interfaces, supported by a solid and well-structured back-end.",
+    "items": {
+      "design": {
+        "title": "Design",
+        "description": "The best elegant and responsive design that speaks your company's language."
+      },
+      "development": {
+        "title": "Development",
+        "description": "Development of websites and applications that are easy to use, fast, and efficient."
+      },
+      "seo": {
+        "title": "SEO",
+        "description": "Website optimization to improve visibility and organic traffic."
+      }
+    }
+  },
+  "feedbacks": {
+    "title": "What people say"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message...",
+      "send": "Send"
+    },
+    "notification": {
+      "success": "Email sent successfully!",
+      "error": "Oops, an error occurred while sending the email! Please try again"
+    }
+  },
+  "language": {
+    "switch": "Português"
+  },
+  "meta": {
+    "title": "Rafael Rocha | Portfolio",
+    "description": "Rafael Rocha is a full stack developer, simple, objective and modern"
+  }
+} 

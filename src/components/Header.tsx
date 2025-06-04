@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import LanguageSwitcher from './LanguageSwitcher';
 import Socials from './Socials';
 
 import '../styles/planet.css';
@@ -24,7 +25,10 @@ const Header = () => {
             </div>
           </Link>
 
-          <Socials />
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher />
+            <Socials />
+          </div>
         </div>
       </div>
     </header>

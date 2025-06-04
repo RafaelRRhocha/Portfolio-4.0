@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { FaCss3, FaHtml5, FaNodeJs, FaPython, FaVuejs } from 'react-icons/fa';
 import { IconType } from 'react-icons/lib';
 import {
@@ -32,170 +33,177 @@ interface IInfo {
   title: string;
   stage?: string;
   skills?: Array<ISkill>;
+  translationKey?: string;
 }
 
 interface IAbout {
   title: string;
+  translationKey: string;
   info: Array<IInfo>;
 }
 
-const aboutData: Array<IAbout> = [
-  {
-    title: 'Skills',
-    info: [
-      {
-        title: 'Front-end',
-        skills: [
-          {
-            name: 'HTML',
-            icon: FaHtml5,
-            ref: 'https://developer.mozilla.org/pt-BR/docs/Web/HTML',
-          },
-          {
-            name: 'CSS',
-            icon: FaCss3,
-            ref: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS',
-          },
-          {
-            name: 'jQuery',
-            icon: SiJquery,
-            ref: 'https://jquery.com',
-          },
-          {
-            name: 'TypeScript',
-            icon: SiTypescript,
-            ref: 'https://www.typescriptlang.org',
-          },
-          {
-            name: 'Vue.js',
-            icon: FaVuejs,
-            ref: 'https://vuejs.org',
-          },
-          {
-            name: 'Next.js',
-            icon: SiNextdotjs,
-            ref: 'https://nextjs.org/',
-          },
-          {
-            name: 'Tailwind',
-            icon: SiTailwindcss,
-            ref: 'https://tailwindcss.com/docs/installation',
-          },
-        ],
-      },
-      {
-        title: 'Back-end',
-        skills: [
-          {
-            name: 'Node.js',
-            icon: FaNodeJs,
-            ref: 'https://nodejs.org/en',
-          },
-          {
-            name: 'Express.js',
-            icon: SiExpress,
-            ref: 'https://expressjs.com/pt-br/',
-          },
-          {
-            name: 'Ruby',
-            icon: SiRuby,
-            ref: 'https://www.ruby-lang.org/en/',
-          },
-          {
-            name: 'Python',
-            icon: FaPython,
-            ref: 'https://www.python.org',
-          },
-        ],
-      },
-      {
-        title: 'Banco de Dados',
-        skills: [
-          {
-            name: 'MySQL',
-            icon: SiMysql,
-            ref: 'https://www.mysql.com/',
-          },
-          {
-            name: 'PostgreSQL',
-            icon: SiPostgresql,
-            ref: 'https://www.postgresql.org',
-          },
-          {
-            name: 'Redis',
-            icon: SiRedis,
-            ref: 'https://redis.io',
-          },
-        ],
-      },
-      {
-        title: 'Testes',
-        skills: [
-          {
-            name: 'Cypress',
-            icon: SiCypress,
-            ref: 'https://www.cypress.io',
-          },
-          {
-            name: 'Jest',
-            icon: SiJest,
-            ref: 'https://jestjs.io',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Soft Skills',
-    info: [
-      {
-        title: 'Comunicação Efetiva',
-        stage:
-          'Capacidade de articular ideias complexas de forma clara e objetiva. Facilita o alinhamento entre equipes e stakeholders.',
-      },
-      {
-        title: 'Adaptabilidade',
-        stage:
-          'Aprendizado ágil de novas tecnologias e métodos. Atua com flexibilidade em cenários e equipes em constante mudança.',
-      },
-      {
-        title: 'Proatividade',
-        stage:
-          'Toma iniciativa para identificar e resolver problemas, propondo melhorias contínuas nos processos.',
-      },
-      {
-        title: 'Resolução de Problemas',
-        stage:
-          'Realiza análise criteriosa de requisitos e desenvolve soluções eficazes para desafios técnicos e operacionais.',
-      },
-    ],
-  },
-  {
-    title: 'Experiência',
-    info: [
-      {
-        title: 'Desenvolvedor Full Stack - uMode',
-        stage: '2023 - Atualmente',
-      },
-    ],
-  },
-  {
-    title: 'Escolaridade',
-    info: [
-      {
-        title: 'Desenvolvimento Web Fullstack, Trybe',
-        stage: '2022 - 2023',
-      },
-      {
-        title: 'Engenharia de Software, Estácio',
-        stage: '2023 - Cursando',
-      },
-    ],
-  },
-];
-
 const About = () => {
+  const { t } = useTranslation('common');
   const [index, setIndex] = useState(0);
+
+  const aboutData: Array<IAbout> = [
+    {
+      title: t('about.tabs.skills'),
+      translationKey: 'skills',
+      info: [
+        {
+          title: t('about.categories.frontend'),
+          translationKey: 'frontend',
+          skills: [
+            {
+              name: 'HTML',
+              icon: FaHtml5,
+              ref: 'https://developer.mozilla.org/pt-BR/docs/Web/HTML',
+            },
+            {
+              name: 'CSS',
+              icon: FaCss3,
+              ref: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS',
+            },
+            {
+              name: 'jQuery',
+              icon: SiJquery,
+              ref: 'https://jquery.com',
+            },
+            {
+              name: 'TypeScript',
+              icon: SiTypescript,
+              ref: 'https://www.typescriptlang.org',
+            },
+            {
+              name: 'Vue.js',
+              icon: FaVuejs,
+              ref: 'https://vuejs.org',
+            },
+            {
+              name: 'Next.js',
+              icon: SiNextdotjs,
+              ref: 'https://nextjs.org/',
+            },
+            {
+              name: 'Tailwind',
+              icon: SiTailwindcss,
+              ref: 'https://tailwindcss.com/docs/installation',
+            },
+          ],
+        },
+        {
+          title: t('about.categories.backend'),
+          translationKey: 'backend',
+          skills: [
+            {
+              name: 'Node.js',
+              icon: FaNodeJs,
+              ref: 'https://nodejs.org/en',
+            },
+            {
+              name: 'Express.js',
+              icon: SiExpress,
+              ref: 'https://expressjs.com/pt-br/',
+            },
+            {
+              name: 'Ruby',
+              icon: SiRuby,
+              ref: 'https://www.ruby-lang.org/en/',
+            },
+            {
+              name: 'Python',
+              icon: FaPython,
+              ref: 'https://www.python.org',
+            },
+          ],
+        },
+        {
+          title: t('about.categories.database'),
+          translationKey: 'database',
+          skills: [
+            {
+              name: 'MySQL',
+              icon: SiMysql,
+              ref: 'https://www.mysql.com/',
+            },
+            {
+              name: 'PostgreSQL',
+              icon: SiPostgresql,
+              ref: 'https://www.postgresql.org',
+            },
+            {
+              name: 'Redis',
+              icon: SiRedis,
+              ref: 'https://redis.io',
+            },
+          ],
+        },
+        {
+          title: t('about.categories.testing'),
+          translationKey: 'testing',
+          skills: [
+            {
+              name: 'Cypress',
+              icon: SiCypress,
+              ref: 'https://www.cypress.io',
+            },
+            {
+              name: 'Jest',
+              icon: SiJest,
+              ref: 'https://jestjs.io',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: t('about.tabs.softSkills'),
+      translationKey: 'softSkills',
+      info: [
+        {
+          title: t('about.softSkills.communication.title'),
+          stage: t('about.softSkills.communication.description'),
+        },
+        {
+          title: t('about.softSkills.adaptability.title'),
+          stage: t('about.softSkills.adaptability.description'),
+        },
+        {
+          title: t('about.softSkills.proactivity.title'),
+          stage: t('about.softSkills.proactivity.description'),
+        },
+        {
+          title: t('about.softSkills.problemSolving.title'),
+          stage: t('about.softSkills.problemSolving.description'),
+        },
+      ],
+    },
+    {
+      title: t('about.tabs.experience'),
+      translationKey: 'experience',
+      info: [
+        {
+          title: t('about.experience.umode.title'),
+          stage: t('about.experience.umode.period'),
+        },
+      ],
+    },
+    {
+      title: t('about.tabs.education'),
+      translationKey: 'education',
+      info: [
+        {
+          title: t('about.education.trybe.title'),
+          stage: t('about.education.trybe.period'),
+        },
+        {
+          title: t('about.education.estacio.title'),
+          stage: t('about.education.estacio.period'),
+        },
+      ],
+    },
+  ];
 
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
@@ -204,7 +212,7 @@ const About = () => {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="absolute bottom-0 left-[calc(-330px)] hidden h-[45rem] lg:flex"
+        className="absolute bottom-0 left-[calc(-370px)] hidden h-[45rem] lg:flex"
       >
         <Avatar />
       </motion.div>
@@ -218,7 +226,8 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Código <span className="text-accent">limpo</span> começa com clareza
+            {t('about.title')} <span className="text-accent">limpo</span> começa
+            com clareza
           </motion.h2>
 
           <motion.p
@@ -227,11 +236,7 @@ const About = () => {
             animate="show"
             className="mx-auto mb-6 max-w-[500px] px-2 text-sm md:text-base xl:mx-0 xl:mb-12 xl:px-0"
           >
-            Já colaborei com grandes nomes da moda, como Reserva, Malwee, Grupo
-            Colméia, Grupo Soma, Vivara, NTK, Grupo Laces, entre outros. Busco
-            sempre entregar soluções eficientes e inovadoras, com foco em
-            qualidade e desempenho. Gosto de desafios que me permitam crescer
-            profissionalmente e contribuir com projetos de impacto.
+            {t('about.description')}
           </motion.p>
         </div>
 

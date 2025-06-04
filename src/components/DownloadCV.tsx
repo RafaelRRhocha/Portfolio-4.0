@@ -1,10 +1,16 @@
+'use client';
+
+import { useTranslation } from 'react-i18next';
+
 import Button from './Button';
 
 const DownloadCV = () => {
+  const { t } = useTranslation('common');
+
   return (
     <Button
-      href="https://drive.google.com/file/d/1bo4VJgZ2iOtuQrUr5r4g8F5yD3NImHzo/view?usp=sharing"
-      text="Currículo"
+      href="https://drive.google.com/file/d/1UFCZIQ-dimd7R4syd48rkE8G9HEJbLVd/view?usp=sharing"
+      text={t('home.cv')}
       isExternal
     />
   );

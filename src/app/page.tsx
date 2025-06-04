@@ -1,14 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import DownloadCV from '@/components/DownloadCV';
 import { fadeIn } from '@/helpers/variants';
 
 import Avatar from '../components/Avatar';
-import GoToProjectsPage from '../components/GoToProjectsPage';
 
 const Home = () => {
+  const { t } = useTranslation('common');
+
   return (
     <div className="h-full">
       <div className="size-full">
@@ -20,11 +22,10 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Desenvolvedor <span className="text-accent">Full Stack</span> <br />
+            {t('home.title')} <span className="text-accent">Full Stack</span>{' '}
+            <br />
             {/* Simples, Objetivo e Moderno */}
-            <span className="text-xl md:text-5xl">
-              Simples, Objetivo e Moderno
-            </span>
+            <span className="text-xl md:text-5xl">{t('home.subtitle')}</span>
           </motion.h1>
 
           <motion.p
@@ -34,11 +35,7 @@ const Home = () => {
             exit="hidden"
             className="mx-auto mb-10 max-w-sm xl:mx-0 xl:mb-16 xl:max-w-xl"
           >
-            Soluções fullstack com design moderno e performance. Crio interfaces
-            responsivas e intuitivas que refletem a identidade da sua empresa,
-            junto a um backend sólido, seguro e eficiente. Código limpo, bem
-            estruturado e foco em entregas de qualidade, sempre em colaboração
-            com a equipe.
+            {t('home.description')}
           </motion.p>
 
           <motion.div
@@ -49,7 +46,7 @@ const Home = () => {
             className="flex items-center gap-x-2"
           >
             <DownloadCV />
-            <GoToProjectsPage />
+            {/* <GoToProjectsPage /> */}
           </motion.div>
         </div>
       </div>
