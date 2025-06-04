@@ -62,7 +62,8 @@ const Contact = () => {
             exit="hidden"
             className="h2 mb-12 text-center"
           >
-            {t('contact.title')} <span className="text-accent">Contato</span>
+            {t('contact.title')}{' '}
+            <span className="text-accent">{t('contact.secondTitle')}</span>
           </motion.h2>
 
           <motion.form

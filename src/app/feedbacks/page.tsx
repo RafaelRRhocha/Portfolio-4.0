@@ -20,8 +20,8 @@ const Feedbacks = () => {
           exit="hidden"
           className="h2"
         >
-          {t('feedbacks.title')} <span className="text-accent">pessoas</span>{' '}
-          dizem
+          {t('feedbacks.title')}{' '}
+          <span className="text-accent">{t('feedbacks.secondTitle')}</span>
         </motion.h2>
 
         <motion.div

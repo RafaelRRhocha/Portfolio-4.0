@@ -22,7 +22,8 @@ const Services = () => {
               exit="hidden"
               className="h2 xl:mt-8"
             >
-              {t('services.title')} <span className="text-accent">faço?</span>
+              {t('services.title')}{' '}
+              <span className="text-accent">{t('services.secondTitle')}</span>
             </motion.h2>
             <motion.p
               variants={fadeIn('up', 0.4)}

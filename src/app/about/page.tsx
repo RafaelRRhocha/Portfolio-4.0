@@ -226,8 +226,8 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            {t('about.title')} <span className="text-accent">limpo</span> começa
-            com clareza
+            <span className="text-accent">{t('about.firstTitle')}</span>{' '}
+            {t('about.title')}
           </motion.h2>
 
           <motion.p
@@ -245,7 +245,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex w-full flex-col pb-16 xl:max-w-[48%]"
+          className="mt-10 flex w-full flex-col xl:max-w-[48%]"
         >
           <div className="mx-auto mb-4 flex flex-wrap gap-4 xl:mx-0 xl:gap-x-8">
             {aboutData.map((item, itemI) => (
@@ -262,7 +262,7 @@ const About = () => {
             ))}
           </div>
 
-          <div className="flex flex-col items-center py-2">
+          <div className="flex min-h-[60vh] flex-col items-center py-2">
             {aboutData[index].info.map((item, idx) => (
               <div key={idx} className="mb-6 w-full">
                 <h3 className="mb-4 text-xl font-semibold text-white">

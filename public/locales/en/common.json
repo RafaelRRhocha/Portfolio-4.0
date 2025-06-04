@@ -13,7 +13,8 @@
     "cv": "Resume"
   },
   "about": {
-    "title": "Clean code starts with clarity",
+    "firstTitle": "Clean code",
+    "title": "starts with clarity",
     "description": "I've collaborated with major fashion brands like Reserva, Malwee, Grupo Colméia, Grupo Soma, Vivara, NTK, Grupo Laces, among others. I always strive to deliver efficient and innovative solutions, focusing on quality and performance. I enjoy challenges that allow me to grow professionally and contribute to impactful projects.",
     "tabs": {
       "skills": "Skills",
@@ -63,7 +64,8 @@
     }
   },
   "services": {
-    "title": "What I do?",
+    "title": "What?",
+    "secondTitle": "I do?",
     "description": "I transform ideas into complete digital products. With a focus on front-end, I build modern and responsive interfaces, supported by a solid and well-structured back-end.",
     "items": {
       "design": {
@@ -81,10 +83,47 @@
     }
   },
   "feedbacks": {
-    "title": "What people say"
+    "title": "What",
+    "secondTitle": "people say",
+    "testimonials": [
+      {
+        "message": "Rafael is a developer who truly cares about the quality of what he delivers. He not only translates design into code with precision but also gets genuinely involved in the process, always questioning, suggesting, and collaborating to reach the best solution. He's someone who is always attentive to details and seeks to understand the product context. Additionally, his proactivity and partnership with the team make work much more fluid and productive. Having Rafael on the team means having someone who really cares about the quality of what's being delivered!"
+      },
+      {
+        "message": "Rafael performed beyond expectations in several relevant deliveries. A curious and interested professional with the impact of his work for the business, he stands out for his commitment and character in face of challenges. As a Product Owner, I consider Rafa exceptional in terms of communication and could count on his collaboration not only in code but also in refining tasks and User Stories, facilitating the team's work. Although he has positively demonstrated his adaptability in startup environments, I bet he will soar in more mature and structured contexts 🚀"
+      },
+      {
+        "message": "Since the selection process, Rafael stood out by delivering more than requested, asking pertinent questions, and showing interest in growing. It was his first job as a programmer, and he quickly stood out for his attention to detail (this is very important for frontend), being the design team's favorite when it comes to making exactly like Figma. And more, always questioning design decisions to reach a better, simpler, and more cost-effective final result! He quickly adapted to technologies he didn't yet master like Ruby on Rails and Vue.js, and also showed great skill with those he already knew better like React. This guy has a lot of potential ahead! Success!"
+      },
+      {
+        "message": "Rafael is dedicated, has ease in learning, performs well in groups, helps others with difficulties, and always seeks to update himself with modern technologies and is focused on working and studying. I strongly recommend him to companies looking for an excellent Front-end professional."
+      },
+      {
+        "message": "Rafael is one of my references! Excellent developer, great at front-end, and a great course colleague, always willing to help. I'm a fan of his fronts! I highly recommend him."
+      },
+      {
+        "message": "Rafael Rocha is very technical and a dedicated student. Always seeking new technologies to solve challenges in the technology environment, I strongly recommend him to all companies that wish to have in their staff a professional who makes a difference and contributes to positive results."
+      },
+      {
+        "message": "Rafael Rocha is an excellent developer, strongly dedicated to his learning in Front-end. Always seeking new technologies to solve problems and make user usability the best possible, my recommendation for all companies that want to have a dedicated professional, focused on their work and study."
+      },
+      {
+        "message": "Rafael is an excellent programmer, technically very good and dedicated. I strongly recommend him to all companies that wish to have in their staff a professional who makes a difference and contributes to positive results."
+      },
+      {
+        "message": "If you're looking for someone for front-end, he's the right person. Quite agile and versatile, Rochinha won't rest until he's satisfied with the result to be delivered by him."
+      },
+      {
+        "message": "Rafael is my namesake. Determined and proactive, he always seeks the best option in his challenges, is dedicated, committed, and knows how to work in a team."
+      },
+      {
+        "message": "Rafael is a great professional, receptive, attentive, hardworking, besides being full of willingness to grow and improve himself."
+      }
+    ]
   },
   "contact": {
-    "title": "Get in Touch",
+    "title": "Get in",
+    "secondTitle": "touch",
     "form": {
       "name": "Name",
       "email": "Email",
